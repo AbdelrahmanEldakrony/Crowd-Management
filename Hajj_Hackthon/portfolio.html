@@ -20,6 +20,8 @@
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
+	
+	
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
 	<!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet"> -->
@@ -43,7 +45,7 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/jasny-bootstrap.min.css">
+	
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -103,22 +105,21 @@
 					<div class="display-t">
 						<div class="display-tc">
                             
-                            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+							<image src ="" id="uploadedImage" style="display:none" >
                             <br>
 							<h1 class="animate-box" data-animate-effect="fadeInUp">Please Drag Photo</h1>
-							<p class="animate-box" data-animate-effect="fadeInUp"><div class="fileinput fileinput-new" data-provides="fileinput">
-							  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
-								  <div>
-									<span class="btn btn-default btn-file"><span class="fileinput-new">Upload</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
-									<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-								  </div>
-							  </div>
+							<p class="animate-box" data-animate-effect="fadeInUp">
+								<label class="fileContainer btn btn-white btn-lg btn-outline">
+								Upload Photo
+								<input type="file" id="fileName" accept="image/x-png,image/gif,image/jpeg" onchange="validateFileType()" />
+							</label>
+							</p>
                             <p class="animate-box" data-animate-effect="fadeInUp"><a href="#" class="btn btn-white btn-lg btn-outline">submit</a></p>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+			</div>
 	</header>
         <div class="gtco-container">
         <div class="foo" >
@@ -149,12 +150,55 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-<script src="js/jasny-bootstrap.min.js"></script>s
+	
 	<script>
-	function uploadClickEvent(e){
-		
-	}
+		function validateFileType(){
+			var preview = document.querySelector('img'); //selects the query named img
+		   var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+		   var reader  = new FileReader();
+
+		   reader.onloadend = function () {
+				document.getElementById("uploadedImage").style.display = "block";
+			   preview.src = reader.result;
+		   }
+
+		   if (file) {
+			   reader.readAsDataURL(file); //reads the data as a URL
+		   } else {
+			   preview.src = "";
+		   }
+		}
 	</script>
+	
+	<style>
+	#uploadedImage{
+	width: 350px;
+    border: 1px solid #aaaaaa;
+    text-align: center;
+    height: 200px;
+    margin: 0 auto 0 auto;
+	}
+	
+	.fileContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.fileContainer [type=file] {
+    cursor: inherit;
+    display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+}
+	</style>
+
 	</body>
 </html>
 
