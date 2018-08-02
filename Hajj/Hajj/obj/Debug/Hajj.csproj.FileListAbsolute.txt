@@ -1,0 +1,6 @@
+c:\users\dell\documents\visual studio 2013\Projects\Hajj\Hajj\bin\Debug\Hajj.exe.config
+c:\users\dell\documents\visual studio 2013\Projects\Hajj\Hajj\bin\Debug\Hajj.exe
+c:\users\dell\documents\visual studio 2013\Projects\Hajj\Hajj\bin\Debug\Hajj.pdb
+c:\users\dell\documents\visual studio 2013\Projects\Hajj\Hajj\obj\Debug\Hajj.csprojResolveAssemblyReference.cache
+c:\users\dell\documents\visual studio 2013\Projects\Hajj\Hajj\obj\Debug\Hajj.exe
+c:\users\dell\documents\visual studio 2013\Projects\Hajj\Hajj\obj\Debug\Hajj.pdb
