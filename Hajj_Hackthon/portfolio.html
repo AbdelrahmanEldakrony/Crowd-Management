@@ -43,7 +43,7 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
-
+<link rel="stylesheet" href="css/jasny-bootstrap.min.css">
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -106,7 +106,13 @@
                             <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                             <br>
 							<h1 class="animate-box" data-animate-effect="fadeInUp">Please Drag Photo</h1>
-							<p class="animate-box" data-animate-effect="fadeInUp"><a href="#" class="btn btn-white btn-lg btn-outline">upload</a></p>
+							<p class="animate-box" data-animate-effect="fadeInUp"><div class="fileinput fileinput-new" data-provides="fileinput">
+							  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+								  <div>
+									<span class="btn btn-default btn-file"><span class="fileinput-new">Upload</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+									<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+								  </div>
+							  </div>
                             <p class="animate-box" data-animate-effect="fadeInUp"><a href="#" class="btn btn-white btn-lg btn-outline">submit</a></p>
 						</div>
 					</div>
@@ -143,7 +149,12 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
+<script src="js/jasny-bootstrap.min.js"></script>s
+	<script>
+	function uploadClickEvent(e){
+		
+	}
+	</script>
 	</body>
 </html>
 
